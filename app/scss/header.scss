@@ -1,0 +1,119 @@
+.header {
+  padding: 3rem 4rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  background-color: #fefefd;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items:center;
+
+  &__nav {
+    display: block;
+    position: absolute;
+    left: 0;
+    background-color: #fefefd;
+    box-shadow: 0 4px 2px -2px rgba(36, 36, 36, 0.17);
+    left: -100%;
+    transition: all 0.4s ease;
+    &.open-menu {
+      left: 0;
+    } 
+  }
+  &__menu{
+    width: 26rem;
+    box-sizing: border-box;
+    padding: 0 4rem 4rem;
+    li {
+      list-style: none;
+      margin-top: 2rem;
+    }
+  }
+  &__item {
+    &-title {
+      align-self: center;
+      text-transform: uppercase;
+      color: black;
+      font-family: 'Cuprum', sans-serif;
+      font-size: 3.8rem;
+      font-weight: bold;
+    }
+    &-registration, &-account, &-basket {
+      text-decoration: none;
+      color: black;
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+    &-registration, &-account  {
+      margin-right: 3rem;
+      &:hover {
+        font-weight: 500;
+        text-decoration: underline;
+      }
+    }
+    &-basket {
+      p {
+        display: inline-block;
+      }
+      &:hover {
+        color: green;
+      }
+    }
+  }
+}
+
+.menu-burger__header span, .menu-burger__header:after, .menu-burger__header:before{
+  height: 0.3rem;
+  width: 100%;
+  position: absolute;
+  background: black;
+  margin: 0 auto;
+}
+
+.menu-burger__header {
+  position: relative; 
+  text-align: left;
+  width: 4rem; 
+  height: 3.5rem;
+  display: block;
+  span{
+    top: 1.6rem;
+  }
+  &:after{
+    content: '';
+    bottom: 0.5rem;
+  }
+  &:before{
+    content: '';
+    top: 0.5rem;
+  }
+  &.open-menu {
+    span {
+      opacity:0; 
+      transition: 0.5s; 
+    }
+    &:before {
+      transform: rotate(38deg);
+      top: 16px;
+      transition: 0.4s;
+    }
+    &:after {
+      transform: rotate(-38deg);
+      bottom: 16px;
+      transition: 0.4s;
+    }
+  }
+}
+
+.menu__item {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: #656464;
+  text-decoration: none;
+  &:hover {
+    font-weight: bold;
+    color: black;
+  }
+}

@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Cuprum:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+$background-grey: #323232;
+$footer-text-color: #7f7f7f;
+$footer-h4-color: #c0c0c0;
+$footer-contact-color: #adacac;
+$width-wrapper: 130rem;
+$border-color-input: #8c8c8c;
+$backgroung-color-btn: #9b9b9b;
+
+html {
+  font-size: 10px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+p, h3, h4, ul {
+  margin: 0;
+}
+
+.wrapper {
+  max-width: $width-wrapper;
+  margin: 0 auto;
+}
+
+.pop-up-notification {
+  position: fixed;
+  top: 0;
+  text-align: center;
+  width: 100%;
+  z-index: 100;
+  display: none;
+  &__text {
+    display: inline-block;
+    background-color: $footer-h4-color;
+    padding: 1rem 2rem;
+    border-radius: 0 0 2rem 2rem;
+    font-size: 1.6rem;
+    color: black;
+    font-weight: 500;
+  }
+}
+
+@import 'header.scss';
+
+@import 'content.scss';
+
+@import 'footer.scss';

@@ -1,0 +1,181 @@
+
+.video-banner {
+  //height: 56vw;
+  height: 30vw;
+}
+
+.tool-description {
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0 100px;
+  }
+  &__text {
+    color: black;
+    align-self: center;
+    h3 {
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 2rem;
+      margin-bottom: 2.3rem;
+    }
+    p {
+      font-weight: 300;
+      font-size: 1.6rem;
+    }
+    padding: 0 1.5rem;
+  }
+  &__img {
+    img{
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
+.registration-for-testing {
+  position: relative;
+  &__form {
+    display: flex;
+    &-wrapper {
+      display: none;
+      position: absolute;
+      bottom: 6rem;
+      background-color: #f1f1f1;
+      width: 100%;
+      height: 33rem;
+      flex-direction: column;
+      justify-content:center;
+      align-items:center;
+    }
+    &-title {
+      font-size: 2.4rem;
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 3rem;
+    }
+    &-address {
+      font-size: 1.4rem;
+      text-align: center;
+      font-weight: 400;
+      margin-bottom: 2.7rem;
+    }
+    input {
+      width: 26rem;
+      height: 4.2rem;
+      font-size: 2rem;
+      padding: 6px 0 4px 10px;
+      border: 1px solid $border-color-input;
+      background: white;
+      border-radius: 0.3rem;
+      margin-right: 2.5rem;
+    }
+    button {
+      width: 26rem;
+      height: 100%;
+      font-size: 2rem;
+      color: white;
+      border: 1px solid #4f4f4f;
+      background-color: $backgroung-color-btn;
+      &:hover {
+        background-color: rgba($backgroung-color-btn, 0.7);
+      }
+    }
+  }
+  &__text {
+    background-color: #dcdcdc;
+    text-align: center;
+    text-transform: uppercase;
+    color: #535252;
+    font-weight: 400;
+    font-size: 1.3rem;
+    line-height: 6rem;
+  }
+}
+
+.instruments {
+  position: relative;
+  background: $background-grey;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  &__title {
+    position: absolute;
+    color: white;
+    text-transform: uppercase;
+    top: 2rem;
+    left: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    z-index: 2;
+  }
+  &-item {
+    height: 20vw;
+    max-height: calc(#{$width-wrapper} / 5);
+    color: white;
+    overflow: hidden;
+    position: relative;
+    &__text {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 1.5rem;
+      height: 6rem;
+      display: flex;
+      flex-direction: column;
+      justify-content:space-between;
+      font-size: 1.6rem;
+      h4 {
+        color:white;
+      }
+      p {
+        color: #f0f0f0;
+      }
+    }
+    &:nth-child(2) {
+      background: url(../images/instruments/01.jpg) center center;
+    }
+    &:nth-child(3) {
+      background: url(../images/instruments/02.jpg) center center;
+    }
+    &:nth-child(4) {
+      background: url(../images/instruments/03.jpg) center center;
+    }
+    &:nth-child(5) {
+      background: url(../images/instruments/04.jpg) center center;
+    }
+    &:nth-child(6) {
+      background: url(../images/instruments/05.jpg) center center;
+    }
+    &:nth-child(7) {
+      background: url(../images/instruments/06.png) center center;
+    }
+    &:nth-child(8) {
+      background: url(../images/instruments/07.png) center center;
+    }
+    &:nth-child(9) {
+      background: url(../images/instruments/08.png) center center;
+    }
+    &:nth-child(10) {
+      background: url(../images/instruments/09.png) center center;
+    }
+    &:nth-child(11) {
+      background: url(../images/instruments/10.png) center center;
+    }
+    &:nth-child(n) {
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 100% auto;
+    }
+    &:hover {
+      transition: background-size .3s ease-in;
+      background-size: 110% auto;
+    }
+    &__hover-text {
+      display: none;
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      position: absolute;
+      top: calc((100% - 1.9rem) / 2);
+      left: calc((100% - 6.3rem) / 2);
+    }
+  }
+}

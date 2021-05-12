@@ -1,0 +1,99 @@
+
+.footer {
+  height: 43rem;
+  background-color: #171717;
+  padding: 4rem calc((100vw - #{$width-wrapper}) / 2) 0;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  &-nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr)
+  }
+  &-list {
+    padding-left: 3.4rem;
+    padding-bottom: 6rem;
+    &__item {
+      list-style-type: none;
+      h4 {
+        color: $footer-h4-color;
+        &:hover {
+          color:white;
+        }
+      }
+    }
+    &__link {
+      text-decoration: none;
+      color: $footer-text-color;
+      font-weight: 400;
+      font-size: 1.4rem;
+      line-height: 2.8rem;
+      &:hover {
+        color:white;
+      }
+    }
+  }
+  &-contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    &__wrapper {
+      display: inline-block;
+    }
+    address {
+      color: $footer-contact-color;
+      font-size: 1.4rem;
+      line-height: 2.8rem;
+    }
+    a {
+      text-decoration: none;
+      color: $footer-contact-color;
+      font-size: 1.4rem;
+      line-height: 2.8rem;
+    }
+    &__item {
+      margin-bottom: 5rem;
+    }
+  }
+}
+.social-network {
+  padding: 0;
+  li {
+    list-style-type: none;
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 2.5rem;
+    margin-right: 1.3rem;
+  }
+  a {
+    display: block;
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 2.75rem;
+  }
+  &__vk {
+    background-color: rgba(#1f61a3, 0.8);
+    &:hover {
+      background-color: #1f61a3;
+    }
+  }
+  &__facebook {
+    background-color: rgba(#1d2c81, 0.8);
+    &:hover {
+      background-color: #1d2c81;
+    }
+  }
+  &__twitter {
+    background-color: rgba(#28a5db, 0.8);
+    &:hover {
+      background-color: #28a5db;
+    }
+  }
+  &__pinterest {
+    background-color: rgba(#a3212c, 0.8);
+    &:hover {
+      background-color: #a3212c;
+    }
+  }
+}
