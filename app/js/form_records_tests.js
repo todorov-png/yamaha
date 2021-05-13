@@ -9,7 +9,7 @@ $(document).ready(function() {
 			url: "mail.php", //Change
 			data: th.serialize()
 		}).done(function() {
-			callPopUp('.pop-up-notification', '.pop-up-notification__text', 'Ваша зявки принята, ожидайте звонка');
+			callPopUp('.pop-up-notification', '.pop-up-notification__text', 'Ваша заявка принята, ожидайте звонка');
 			setTimeout(function() {
 				// Done Functions
 				th.trigger("reset");
@@ -34,3 +34,11 @@ hoverBtnTesting.addEventListener('mouseover', showFormTests);
 hoverBtnTesting.addEventListener('touchstart', showFormTests);
 //hoverBtnTesting.addEventListener('touchenter', showFormTests);
 
+//При изменении ширины окна работаем с блоками
+window.addEventListener('resize', function(event){
+	if (tool[2].offsetWidth > 480) {
+		formTesting.style.height = tool[2].offsetHeight + 1 + 'px';
+	} else {
+		formTesting.style.height = tool[1].offsetHeight + tool[2].offsetHeight + 1 + 'px';
+	}
+});

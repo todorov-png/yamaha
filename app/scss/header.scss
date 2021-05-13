@@ -9,13 +9,12 @@
   flex-direction: row;
   justify-content: space-between;
   align-items:center;
-
   &__nav {
     display: block;
     position: absolute;
     left: 0;
     background-color: #fefefd;
-    box-shadow: 0 4px 2px -2px rgba(36, 36, 36, 0.17);
+    box-shadow: 4px 4px 2px -2px rgba(36, 36, 36, 0.17);
     left: -100%;
     transition: all 0.4s ease;
     &.open-menu {
@@ -29,6 +28,10 @@
     li {
       list-style: none;
       margin-top: 2rem;
+      &:nth-child(1), &:nth-child(2) {
+        display: none;
+        text-decoration: underline;
+      }
     }
   }
   &__item {
@@ -115,5 +118,25 @@
   &:hover {
     font-weight: bold;
     color: black;
+  }
+}
+
+@media (max-width: 960px) {
+  .header {
+    padding: 2rem 3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .header{
+    padding: 1rem 2rem;
+    &__menu {
+      li:nth-child(1), li:nth-child(2) {
+        display: block;
+      }
+    }
+    &__item-registration, &__item-account {
+      display: none;
+    }
   }
 }

@@ -1,6 +1,5 @@
 
 .video-banner {
-  //height: 56vw;
   height: 30vw;
 }
 
@@ -8,7 +7,7 @@
   &__row {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 0 100px;
+    grid-gap: 0 10rem;
   }
   &__text {
     color: black;
@@ -123,6 +122,7 @@
       flex-direction: column;
       justify-content:space-between;
       font-size: 1.6rem;
+      width: calc(100% - 3rem);
       h4 {
         color:white;
       }
@@ -177,5 +177,267 @@
       top: calc((100% - 1.9rem) / 2);
       left: calc((100% - 6.3rem) / 2);
     }
+  }
+}
+
+@media (max-width: 1200px) {
+  .video-banner {
+    height: 35vw;
+  }
+  .instruments-item {
+    &__text {
+      font-size: 1.4rem;
+      bottom: 1.4rem;
+      left: 1.4rem;
+      width: calc(100% - 2.8rem);
+    }
+    &__hover-text {
+      font-size: 1.4rem;
+      top: calc((100% - 1.7rem) / 2);
+      left: calc((100% - 5.5rem) / 2);
+    }
+  }
+  .tool-description__row {
+    grid-gap: 0 5rem;
+  }
+}
+
+@media (max-width: 960px) {
+  .video-banner {
+    height: 40vw;
+  }
+  .instruments {
+    &__title {
+      font-size: 1rem;
+    }
+    &-item__text {
+      font-size: 1.3rem;
+      bottom: 1.3rem;
+      left: 1.3rem;
+      width: calc(100% - 2.6rem);
+    }
+    &-item__hover-text {
+      font-size: 1.3rem;
+      top: calc((100% - 1.5rem) / 2);
+      left: calc((100% - 5.1rem) / 2);
+    }
+  }
+  .registration-for-testing {
+    &__form {
+      &-title {
+        font-size: 2.1rem;
+        margin-bottom: 1.7rem;
+        padding: 0 1rem;
+      }
+      &-address {
+        margin-bottom: 2.5rem;
+        padding: 0 1rem;
+      }
+      input {
+        width: 15rem;
+        height: 3rem;
+        font-size: 1.6rem;
+        margin-right: 1.5rem;
+      }
+      button {
+        width: 15rem;
+        height: 100%;
+        font-size: 1.6rem;
+      }
+    }
+  }
+  .tool-description {
+    &__row {
+      grid-gap: 0 2rem;
+    }
+    &__text {
+      h3 {
+        font-size: 1.7rem;
+        margin-bottom: 1.3rem;
+      }
+      p {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .instruments {
+    &__title {
+      font-size: 0.9rem;
+    }
+    &-item__text {
+      font-size: 1.1rem;
+      bottom: 1rem;
+      left: 1rem;
+      height: 5rem;
+      width: calc(100% - 2rem);
+    }
+    &-item__hover-text {
+      font-size: 1.1rem;
+      top: calc((100% - 1.3rem) / 2);
+      left: calc((100% - 4.3rem) / 2);
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .tool-description {
+    &__row {
+      grid-gap: 0 0;
+    }
+    &__text {
+      h3 {
+        font-size: 1.4rem;
+        margin-bottom: 1.2rem;
+      }
+      p {
+        font-size: 1.2rem;
+      }
+    }
+  }
+  .registration-for-testing {
+    &__text {
+      line-height: 5rem;
+      font-size: 1.2rem;
+    }
+    &__form-wrapper {
+      bottom: 4.95rem;
+    }
+  }
+  .instruments {
+    grid-template-columns: repeat(4, 1fr);
+    &-item {
+      height: 25vw;
+      &:nth-child(10), &:nth-child(11) {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .video-banner {
+    height: 45vw;
+  }
+  .registration-for-testing {
+    &__form {
+      &-title {
+        font-size: 1.9rem;
+        margin: 1rem 1rem;
+      }
+      &-address {
+        margin-bottom: 1.5rem;
+      }
+      input {
+        height: 2.5rem;
+      }
+    }
+  } 
+}
+
+@media (max-width: 540px) {
+  .video-banner {
+    height: 50vw;
+  }
+  .tool-description {
+    &__text {
+      h3 {
+        font-size: 1rem;
+        margin-bottom: 0.4rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+  .registration-for-testing {
+    &__form {
+      &-wrapper {
+        bottom: 5rem;
+      }
+      &-title {
+        font-size: 1.4rem;
+        margin: 0.3rem 1rem;
+      }
+      &-address {
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+      }
+      &__text {
+        line-height: 3.5rem;
+        font-size: 1rem;
+      }
+      input {
+        width: 13rem;
+        height: 2rem;
+        font-size: 1.4rem;
+      }
+      button {
+        width: 13rem;
+        font-size: 1.4rem;
+      }
+    }
+  } 
+  .instruments {
+    grid-template-columns: repeat(3, 1fr);
+    &-item {
+      height: 32vw;
+      &:nth-child(10) {
+        display: block;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .tool-description {
+    &__row {
+      display: flex;
+      justify-content: space-between;
+      align-items:center;
+    }
+    &__text {
+      padding: 1rem 1.5rem;
+    }
+  } 
+  .registration-for-testing__form {
+    display: grid;
+    grid-template-columns: repeat(13, 1fr);
+    grid-gap: 1rem 1rem;
+    grid-template-areas:
+      ". ie ie ie ie ie . ip ip ip ip ip ."
+      ". . . . btn btn btn btn btn . . . .";
+    button {
+      grid-area: btn;
+      width: auto;
+      line-height: 3rem;
+    }
+    input {
+      margin-right: 0;
+      width: auto;
+      &:nth-child(4) {
+        grid-area: ie;
+      }
+      &:nth-child(5) {
+        grid-area: ip;
+      }
+    }
+  } 
+  .instruments {
+    grid-template-columns: repeat(2, 1fr);
+    &-item {
+      height: 50vw;
+      &:nth-child(11) {
+        display: block;
+      }
+    }
+  }
+} 
+
+@media (max-width: 360px) {
+  .video-banner {
+    height: 56vw;
   }
 }

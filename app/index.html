@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="pop-up-notification">
-        <p class="pop-up-notification__text">33333</p>
+        <p class="pop-up-notification__text"></p>
     </div>
     <div class="wrapper">
         <header class = "header">
@@ -20,6 +20,8 @@
                 </div>
                 <nav class="header__nav">
                     <ul class="header__menu">
+                        <li><a href="#" class="menu__item">Зарегистрироваться</a></li>
+                        <li><a href="#" class="menu__item">Мой аккаунт</a></li>
                         <li><a href="#" class="menu__item">Барабаны</a></li>
                         <li><a href="#" class="menu__item">Гитары и бас гитары</a></li>
                         <li><a href="#" class="menu__item">Фортепиано</a></li>
@@ -76,17 +78,16 @@
         </section>
         <section class="registration-for-testing">
             <div class="registration-for-testing__form-wrapper">
-                <h3 class="registration-for-testing__form-title">Заявка на тестирование понравившегося иструмента</h3>
+                <h3 class="registration-for-testing__form-title">Заявка на тестирование понравившегося инструмента</h3>
                 <p class="registration-for-testing__form-address">Мы находимся по адресу г. Днепр, ул. Киевская д.7. Работаем с 8:00 до 21:00<br>Чтобы протестировать инструмент,оставьте свою заявку и наш модератор свяжиться с вами! </p>
                 <form class="registration-for-testing__form">
                     <!-- Hidden Required Fields -->
                     <input type="hidden" name="project_name" value="YAMAHA">
                     <input type="hidden" name="admin_email" value="yamaha@yamahashop.zzz.com.ua">
                     <input type="hidden" name="form" value="Форма регистрации на тестирование">
-                    <!-- <input type="hidden" name="form_testing" value="Form registration for testing"> -->
                     <!-- END Hidden Required Fields -->
-                    <input type="email" name="E-mail" placeholder="E-mail" required><br>
-                    <input type="text" name="Phone" placeholder="Номер телефона" required pattern="^[ 0-9]+$" minlength="10" maxlength="10"><br>
+                    <input type="email" name="E-mail" placeholder="E-mail" required><!-- <br> -->
+                    <input type="text" name="Phone" placeholder="Номер телефона" required pattern="^[ 0-9]+$" minlength="10" maxlength="10"><!-- <br> -->
                     <button>Отправить</button>
                 </form>
             </div>
@@ -118,7 +119,7 @@
             <div class="instruments-item">
                 <span class="instruments-item__hover-text">Купить</span>
                 <div class="instruments-item__text">
-                    <h4>Барабанная установка Crash Force Five DrumSet</h4>
+                    <h4>Барабанная установка Crash Force Five</h4>
                     <p>5 000 грн</p>
                 </div>
             </div>
@@ -237,7 +238,7 @@
                     </ul>
                 </div>
                 <div class="footer-contacts__item">
-                    <address>ООО "Ямаха Мюзик"<br>121059, Украина, Днепр, <br>ул.Киевская д.7</address>
+                    <address>ООО "Ямаха Мюзик" 121059, Украина, Днепр, ул.Киевская д.7</address>
                 </div>
                 <div class="footer-contacts__item">
                     <a href="tel:+380666700460">+380 (66) 670-04-60</a>
@@ -245,7 +246,6 @@
             </div>
         </div>
     </footer>
-   <!--  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script> -->
     <script src="https://kit.fontawesome.com/5ee99253b8.js" crossorigin="anonymous"></script>
     <script src="js/main.min.js"></script>
 </body>

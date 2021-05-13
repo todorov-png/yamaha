@@ -7,11 +7,18 @@ const header = document.querySelector(".header"),
       headerNav = header.querySelector(".header__nav"),
       headerItem = header.querySelectorAll(".header__item");
 
-headerNav.style.top = header.offsetHeight + 'px';
-
 burgerMenu.onclick = () => {
   burgerMenu.classList.toggle("open-menu");
   headerNav.classList.toggle("open-menu");
 };
 
-headerItem[0].style.width = headerItem[2].offsetWidth + 'px';
+//При изменении ширины окна работаем с блоками
+window.addEventListener('resize', function(event){
+  if (header.offsetWidth > 960) {
+    headerItem[0].style.width = headerItem[2].offsetWidth + 'px';
+  } else {
+    headerItem[0].style.width = 'auto';
+  }
+
+  headerNav.style.top = header.offsetHeight + 'px';
+});
