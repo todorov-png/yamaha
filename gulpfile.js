@@ -65,9 +65,35 @@ function styles() {
         .pipe(browserSync.stream());                   // Обновляем сервер
 }
 
+function styles2() {
+    return src('app/scss/page2.scss')                  // Фаил с которым работаем
+        .pipe(scss({outputStyle: 'compressed'}))       // Конвертируем в css и сжимаем
+        .pipe(concat('page2.min.css'))                 // Переименовываем
+        .pipe(autoprefixer({                           // Добавляем автопрефиксы
+            overrideBrowserslist: ['last 10 version'], // Для 10 последних версий
+            grid: true
+        }))                    
+        .pipe(dest('app/css'))                         // Сохраняем в фаил
+        .pipe(browserSync.stream());                   // Обновляем сервер
+}
+
+function stylesform() {
+    return src('app/scss/form_reg.scss')                  // Фаил с которым работаем
+        .pipe(scss({outputStyle: 'compressed'}))       // Конвертируем в css и сжимаем
+        .pipe(concat('form_reg.min.css'))                 // Переименовываем
+        .pipe(autoprefixer({                           // Добавляем автопрефиксы
+            overrideBrowserslist: ['last 10 version'], // Для 10 последних версий
+            grid: true
+        }))                    
+        .pipe(dest('app/css'))                         // Сохраняем в фаил
+        .pipe(browserSync.stream());                   // Обновляем сервер
+}
+
 function build(){
     return src([
         'app/css/style.min.css',
+        'app/css/page2.min.css',
+        'app/css/form_reg.min.css',
         'app/fonts/**/*',
         'app/js/main.min.js',
         'app/*.html'
@@ -77,11 +103,16 @@ function build(){
 
 function watching() {
     watch(['app/scss/**/*.scss'], styles);   //Следим за файлами и запускаем конвертацию
+    watch(['app/scss/**/*.scss'], styles2);   //Следим за файлами и запускаем конвертацию
+    watch(['app/scss/**/*.scss'], stylesform);   //Следим за файлами и запускаем конвертацию
     watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);  //Слежу за изменением в скриптах
+    watch(["app/page/*.html"]).on('change', browserSync.reload); //Следим за изменениями и обновляем сервер
     watch(["app/*.html"]).on('change', browserSync.reload); //Следим за изменениями и обновляем сервер
 }
 
 exports.styles = styles;
+exports.styles2 = styles2;
+exports.stylesform = stylesform;
 exports.watching = watching;
 exports.browsersync = browsersync;
 exports.scripts = scripts;
@@ -89,4 +120,4 @@ exports.images = images;
 exports.cleanDist = cleanDist;
 
 exports.build = series(cleanDist, images, build);
-exports.default = parallel(styles, scripts, browsersync, watching);
+exports.default = parallel(styles, styles2, stylesform, scripts, browsersync, watching);

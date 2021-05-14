@@ -7,6 +7,7 @@ const tool = document.querySelectorAll(".tool-description__row"),
 
 function showFormTests() {
   formTesting.style.display = "flex";
+	formTesting.style.opacity = 1;
 	if (tool[2].offsetWidth > 480) {
 		formTesting.style.height = tool[2].offsetHeight + 1 + 'px';
 	} else {
@@ -30,12 +31,8 @@ $(document).ready(function() {
 			data: th.serialize()
 		}).done(function() {
 			callPopUp('.pop-up-notification', '.pop-up-notification__text', 'Ваша заявка принята, ожидайте звонка');
+			smoothTransparencyChange(formTesting, 1000, 50);
 			th.trigger("reset");
-			formTesting.style.display = "none";
-			/* setTimeout(function() {
-				// Done Functions
-				th.trigger("reset");
-			}, 1000); */
 		});
 		return false;
 	});

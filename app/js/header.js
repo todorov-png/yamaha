@@ -1,7 +1,5 @@
 'use strict';
 
-//import setOpacity from './pop_up.js';
-
 const header = document.querySelector(".header"),
       burgerMenu = header.querySelector(".menu-burger__header"),
       headerNav = header.querySelector(".header__nav"),
@@ -12,13 +10,18 @@ burgerMenu.onclick = () => {
   headerNav.classList.toggle("open-menu");
 };
 
-//При изменении ширины окна работаем с блоками
-window.addEventListener('resize', function(event){
+function headerRendering() {
   if (header.offsetWidth > 960) {
     headerItem[0].style.width = headerItem[2].offsetWidth + 'px';
   } else {
     headerItem[0].style.width = 'auto';
   }
-
   headerNav.style.top = header.offsetHeight + 'px';
+}
+
+headerRendering();
+
+//При изменении ширины окна перерисовываем шапку
+window.addEventListener('resize', function(event){
+  headerRendering();
 });
