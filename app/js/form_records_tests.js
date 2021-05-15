@@ -15,10 +15,13 @@ function showFormTests() {
 	}
 }
 
-hoverBtnTesting.addEventListener('mouseover', showFormTests);
-hoverBtnTesting.addEventListener('touchstart', showFormTests);
-window.addEventListener('resize', showFormTests);
-//hoverBtnTesting.addEventListener('touchenter', showFormTests);
+if (hoverBtnTesting) {
+	hoverBtnTesting.addEventListener('mouseover', showFormTests);
+	hoverBtnTesting.addEventListener('touchstart', showFormTests);
+	window.addEventListener('resize', showFormTests);
+	//hoverBtnTesting.addEventListener('touchenter', showFormTests);
+}
+
 
 //Получение данных с формы заявки без перезагрузки
 $(document).ready(function() {

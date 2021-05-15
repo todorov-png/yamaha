@@ -5,11 +5,6 @@ const header = document.querySelector(".header"),
       headerNav = header.querySelector(".header__nav"),
       headerItem = header.querySelectorAll(".header__item");
 
-burgerMenu.onclick = () => {
-  burgerMenu.classList.toggle("open-menu");
-  headerNav.classList.toggle("open-menu");
-};
-
 function headerRendering() {
   if (header.offsetWidth > 960) {
     headerItem[0].style.width = headerItem[2].offsetWidth + 'px';
@@ -19,9 +14,17 @@ function headerRendering() {
   headerNav.style.top = header.offsetHeight + 'px';
 }
 
-headerRendering();
-
-//При изменении ширины окна перерисовываем шапку
-window.addEventListener('resize', function(event){
+if (header) {
   headerRendering();
-});
+
+  //При изменении ширины окна перерисовываем шапку
+  window.addEventListener('resize', function(event){
+    headerRendering();
+  });
+  
+  burgerMenu.onclick = () => {
+    burgerMenu.classList.toggle("open-menu");
+    headerNav.classList.toggle("open-menu");
+  };
+}
+

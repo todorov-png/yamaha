@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cuprum:wght@700&family=Roboto:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cuprum:wght@400;700&family=Roboto:wght@300;400;700&display=swap');
 
 $background-grey: #323232;
 $footer-text-color: #7f7f7f;
@@ -48,5 +48,217 @@ p, h3, h4, ul {
 
 @import 'header.scss';
 
+.header {
+  height: 7.4rem;
+  box-sizing: border-box;
+}
+
+.wrapper-form-reg-speed {
+  padding: 2.5rem 6rem;
+}
+
+.home-link {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 2rem;
+  &:hover {
+    color: green;
+  }
+}
+
+.form-reg-speed {
+  background-color: #bdb8b8;
+  border-radius: 1.2rem;
+  padding: 5rem 7rem 3rem;
+  position: relative;
+  height: 30rem;
+  &__heading {
+    border-bottom: 1px solid #7b7a7a;
+    margin-bottom: 5rem;
+    h4 {
+      font-weight: 300;
+      font-size: 2.6rem;
+      color: #7b7a7a;
+    }
+  }
+  &__form {
+    label {
+      font-weight: 400;
+      color: black;
+      font-size: 1.8rem;
+      margin-right: 2rem;
+      display: inline-block;
+      width: 6.8rem;
+    }
+    input {
+      height: 5.7rem;
+      width: 58rem;
+      font-weight: 400;
+      font-size: 1.6rem;
+      padding: 2rem 2.5rem;
+      box-sizing: border-box;
+      margin-bottom: 2rem;
+    }
+    &-conteiner-btn {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      position: absolute;
+      bottom: 3rem;
+      width: calc(100% - 14rem);
+      span {
+        font-weight: 400;
+        color: black;
+        font-size: 1.5rem;
+      }
+      a {
+        color: black;
+      }
+      button {
+        color: black;
+        background-color: #775858;
+        height: 4rem;
+        min-width: 17.5rem;
+        font-size: 1.5rem;
+        font-weight: 300;
+        border: none;
+        right: 0;
+        margin-left: 1rem;
+      }
+    }
+  }
+}
+
+.home-link {
+  color: black;
+
+}
+
+@media (max-width: 960px) {
+  .header {
+    padding: 2rem 3rem;
+  }
+  .form-reg-speed__form-row {
+    width: 100%;
+    input {
+      width: calc(100% - 9.2rem);
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .wrapper-form-reg-speed {
+    padding: 2rem;
+  }
+  .form-reg-speed {
+    padding: 4rem 5rem 2rem;
+    &__form-conteiner-btn {
+      width: calc(100% - 10rem);
+      button {
+        min-width: 15rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .form-reg-speed {
+    padding: 3rem 3rem 1rem;
+    height: 25rem;
+    &__heading {
+      margin-bottom: 3rem;
+      h4 {
+        font-size: 2.2rem;
+      }
+    }
+    &__form-row {
+      width: 100%;
+      input {
+        height: 4.5rem
+      }
+    }
+    &__form-conteiner-btn {
+      width: calc(100% - 6rem);
+      button {
+        min-width: 12rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 540px) {
+  .form-reg-speed {
+    height: 19rem;
+    &__heading {
+      margin-bottom: 1.5rem;
+      h4 {
+        font-size: 1.8rem;
+      }
+    }
+    &__form {
+      label {
+        font-size: 1.4rem;
+        margin-right: 1rem;
+        width: 5.8rem;
+      }
+      input {
+        height: 3.5rem;
+        width: calc(100% - 7.1rem);
+        font-size: 1.4rem;
+        padding: 1rem 1.5rem;
+        margin-bottom: 1rem;
+      }
+      &-conteiner-btn {
+        bottom: 2rem;
+        width: calc(100% - 6rem);
+        span {
+          font-size: 1.2rem;
+        }
+        button {
+          height: 3.3rem;
+          min-width: 10.5rem;
+          font-size: 1.4rem;
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .form-reg-speed {
+    height: 19.5rem;
+    padding: 1rem;
+    &__form {
+      label {
+        margin-right: 0;
+      }
+      input {
+        height: 3.3rem;
+        width: calc(100% - 6.1rem);
+        padding: 1rem 1rem;
+      }
+      &-conteiner-btn {
+        bottom: 1rem;
+        width: calc(100% - 2rem);
+        flex-direction: column-reverse;
+        span {
+          margin-top: 1rem;
+        }
+        button {
+          height: 3.3rem;
+          min-width: 13.1rem;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+  .home-link {
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.6rem;
+  }
+}
 
 @import 'footer.scss';
