@@ -78,9 +78,9 @@ function styles2() {
 }
 
 function stylesform() {
-    return src('app/scss/form_reg.scss')                  // Фаил с которым работаем
+    return src('app/scss/form_account.scss')           // Фаил с которым работаем
         .pipe(scss({outputStyle: 'compressed'}))       // Конвертируем в css и сжимаем
-        .pipe(concat('form_reg.min.css'))                 // Переименовываем
+        .pipe(concat('form_account.min.css'))          // Переименовываем
         .pipe(autoprefixer({                           // Добавляем автопрефиксы
             overrideBrowserslist: ['last 10 version'], // Для 10 последних версий
             grid: true
@@ -93,7 +93,7 @@ function build(){
     return src([
         'app/css/style.min.css',
         'app/css/page2.min.css',
-        'app/css/form_reg.min.css',
+        'app/css/form_account.min.css',
         'app/fonts/**/*',
         'app/js/main.min.js',
         'app/*.html'

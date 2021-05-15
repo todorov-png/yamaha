@@ -1,0 +1,217 @@
+$color-gray: #7b7b7b;
+
+.wrapper-form-authorization {
+  width: calc(100% - 6rem);
+  padding: 1rem 3rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.form-authorization {
+  &__headers {
+    p {
+      color: $color-gray;
+      text-align: center;
+      &:nth-child(1) {
+        font-weight: 300;
+        font-size: 2.6rem;
+      }
+      &:nth-child(2) {
+        color: #2f2f2f;
+        margin-top: 2.5rem;
+        margin-bottom: 3rem;
+        font-size: 4.5rem;
+      }
+      &:nth-child(3) {
+        font-weight: 300;
+        font-size: 2.2rem;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+  &__form {
+    &-row {
+      text-align: center;
+      label {
+        font-weight: 400;
+        color: black;
+        font-size: 1.8rem;
+        margin-right: 2rem;
+        display: inline-block;
+        width: 6.8rem;
+      }
+      input {
+        height: 5.7rem;
+        width: 50rem;
+        font-weight: 400;
+        font-size: 1.6rem;
+        padding: 2rem 2.5rem;
+        box-sizing: border-box;
+        margin-bottom: 2rem;
+        margin-right: 6.8rem;
+      }
+    }
+    &-conteiner-btn {
+      text-align: center;
+      margin-bottom: 6rem;
+      button {
+        color: black;
+        background-color: #a08585;
+        height: 5.8rem;
+        min-width: 28rem;
+        font-size: 2.4rem;
+        font-weight: 300;
+        border: 1px solid $color-gray;
+      }
+    }
+  }
+}
+
+.new-user {
+  &__title {
+    text-align: center;
+    color: black;
+    font-size: 2.4rem;
+    font-weight: 300;
+    border-bottom: 1px solid #c2c2c2;
+    margin-bottom: 0.7rem;
+  }
+  span {
+    font-size: 1.8rem;
+    font-weight: 300;
+  }
+  a {
+    display: block;
+    font-size: 2.4rem;
+    font-weight: 300;
+    color: black;
+    background-color: #a4a4a4;
+    box-sizing: border-box;
+    cursor: default;
+    text-decoration: none;
+    border: 1px solid $color-gray;
+    height: 5.8rem;
+    width: 28rem;
+    text-align: center;
+    line-height: 5.3rem;
+    margin: 1.7rem auto 2.5rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .form-authorization {
+    &__headers {
+      p {
+        &:nth-child(1) {
+          font-size: 2.4rem;
+        }
+        &:nth-child(2) {
+          margin: 1.2rem auto;
+          font-size: 4rem;
+        }
+        &:nth-child(3) {
+          font-size: 2rem;
+        }
+      }
+    }
+    &__form {
+      &-row {
+        label {
+          font-size: 1.6rem;
+          margin-right: 1rem;
+          width: 6rem;
+        }
+        input {
+          height: 4rem;
+          width: calc(100% - 15rem);
+          font-size: 1.5rem;
+          padding: 2rem 2rem;
+          margin-bottom: 1.5rem;
+          margin-right: 7rem;
+        }
+      }
+      &-conteiner-btn {
+        margin-bottom: 3rem;
+        button {
+          height: 4rem;
+          min-width: 22rem;
+          font-size: 2.2rem;
+        }
+      }
+    }
+  }
+  .new-user {
+    &__title {
+      font-size: 2.2rem;
+    }
+    span {
+      font-size: 1.6rem;
+    }
+    a {
+      font-size: 2.2rem;
+      height: 4rem;
+      width: 22rem;
+      line-height: 4rem;
+      margin: 1.5rem auto 1rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .form-authorization {
+    &__headers {
+      p {
+        &:nth-child(1) {
+          font-size: 1.8rem;
+        }
+        &:nth-child(2) {
+          margin: 0.5rem auto;
+          font-size: 2.5rem;
+        }
+        &:nth-child(3) {
+          font-size: 1.5rem;
+        }
+      }
+    }
+    &__form {
+      &-row {
+        text-align: right;
+        label {
+          font-size: 1.4rem;
+          margin-right: 0.3rem;
+          width: 5.5rem;
+        }
+        input {
+          height: 2.7rem;
+          width: calc(100% - 7.5rem);
+          font-size: 1.4rem;
+          padding: 1rem;
+          margin-bottom: 1rem;
+          margin-right: 1rem;
+        }
+      }
+      &-conteiner-btn {
+        margin-bottom: 1rem;
+        button {
+          height: 2.7rem;
+          min-width: 12rem;
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+  .new-user {
+    &__title {
+      font-size: 1.6rem;
+    }
+    span {
+      font-size: 1.2rem;
+    }
+    a {
+      font-size: 1.6rem;
+      height: 2.7rem;
+      width: 12rem;
+      line-height: 2.5rem;
+      margin: 1rem auto;
+    }
+  }
+}

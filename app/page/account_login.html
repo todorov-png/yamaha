@@ -45,29 +45,33 @@
             </a>
         </div>
     </header>
-    <section class="wrapper-form-reg-speed">
-      <div class="form-reg-speed">
-        <a href="../index.html" class="home-link">
-          <i class="fas fa-home"></i>
-        </a>
-        <div class="form-reg-speed__heading">
-            <h4>Быстрая регистрация</h4>
+    <section class="wrapper-form-authorization">
+      <div class="form-authorization">
+        <div class="form-authorization__headers">
+          <p>Авторизация/Регистрация</p>
+          <p>
+            <i class="fas fa-user-circle"></i>
+          </p>
+          <p>Я уже зарегистрирован</p>
         </div>
-        <form class="form-reg-speed__form">
-            <div class="form-reg-speed__form-row">
-                <label for="email">E-mail:</label>
-                <input id="email" type="email" name="E-mail" placeholder="E-mail" required>
-            </div>
-            <div class="form-reg-speed__form-row">
-                <label for="password">Пароль:</label>
-                <input id="password" type="password" name="Password" placeholder="Пароль" required minlength="4" maxlength="20">
-            </div>
-          
-          <div class="form-reg-speed__form-conteiner-btn">
-            <span>* Если вы зарегистрированы, перейдите на страницу <a href="account_login.html">входа&nbsp;в&nbsp;систему</a></span>
-            <button>Продолжить</button>
+        <form class="form-authorization__form">
+          <div class="form-authorization__form-row">
+              <label for="email">E-mail:</label>
+              <input id="email" type="email" name="E-mail" placeholder="E-mail" required>
           </div>
-      </form>
+          <div class="form-authorization__form-row">
+              <label for="password">Пароль:</label>
+              <input id="password" type="password" name="Password" placeholder="Пароль" required minlength="4" maxlength="20">
+          </div>
+          <div class="form-authorization__form-conteiner-btn">
+            <button>Войти</button>
+          </div>
+        </form>
+      </div>
+      <div class="new-user">
+        <p class="new-user__title">Новый пользователь</p>
+        <span>Создание учетной записи позволит делать покупки быстрее и видеть состояние заказа.</span>
+        <a href="form_reg.html">Регистрация</a>
       </div>
     </section>
 </div>
