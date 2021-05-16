@@ -26,11 +26,11 @@ if (hoverBtnTesting) {
 //Получение данных с формы заявки без перезагрузки
 $(document).ready(function() {
 	//E-mail Ajax Send
-	$(".registration-for-testing__form").submit(function() { //Change
+	$(".registration-for-testing__form").submit(function() {
 		var th = $(this);
 		$.ajax({
 			type: "POST",
-			url: "mail.php", //Change
+			url: "../php/mail.php",
 			data: th.serialize()
 		}).done(function() {
 			callPopUp('.pop-up-notification', '.pop-up-notification__text', 'Ваша заявка принята, ожидайте звонка');
