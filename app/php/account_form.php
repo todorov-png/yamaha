@@ -31,7 +31,7 @@
     }
     
     // переводим массив в JSON и отправляем ответ
-    echo json_encode($answer); 
+    echo json_encode($answer, JSON_UNESCAPED_UNICODE); 
   }    
     
   // закрываем подключение

@@ -39,18 +39,19 @@
     &-title {
       align-self: center;
       text-transform: uppercase;
+      text-decoration: none;
       color: black;
       font-family: 'Cuprum', sans-serif;
       font-size: 3.8rem;
       font-weight: bold;
     }
-    &-registration, &-account, &-basket {
+    &-registration, &-account, &-basket, &-phone {
       text-decoration: none;
       color: black;
       font-size: 1.5rem;
       font-weight: 400;
     }
-    &-registration, &-account  {
+    &-registration, &-account, &-phone  {
       margin-right: 3rem;
       &:hover {
         font-weight: 500;
@@ -136,7 +137,7 @@
         display: block;
       }
     }
-    &__item-registration, &__item-account {
+    &__item-registration, &__item-account, &__item-phone {
       display: none;
     }
   }

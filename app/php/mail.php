@@ -1,5 +1,22 @@
 <?php
 
+// подключаем скрипт
+require_once 'data_connect_db.php'; 
+  
+// подключаемся к серверу
+$link = mysqli_connect($host, $user, $password, $database) 
+		or die("Ошибка " . mysqli_error($link));
+
+// выполняем операции с базой данных
+if (isset($_POST['E-mail']) && isset($_POST['Phone'])) {
+	$email = $_POST['E-mail'];
+	$phone = $_POST['Phone'];
+	$query = "INSERT INTO testing (email, phone) VALUES ('$email', '$phone')";
+	$result = mysqli_query($link, $query); 
+}
+// закрываем подключение
+mysqli_close($link);
+
 $method = $_SERVER['REQUEST_METHOD'];
 
 //Script Foreach
@@ -50,3 +67,4 @@ $headers = "MIME-Version: 1.0" . PHP_EOL .
 'Reply-To: '.$admin_email.'' . PHP_EOL;
 
 mail($admin_email, adopt($form_subject), $message, $headers );
+?>

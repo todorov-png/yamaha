@@ -13,8 +13,18 @@
     $query = "INSERT INTO Users (email, password) VALUES ('$email', '$password')";
     $result = mysqli_query($link, $query);
 
+    if($result) {
+      $answer = array(
+        'password_status' => true,
+        'email' => $email,
+        'phone' => $password,
+        'orders' => 0
+      ); 
+    } else {
+      $answer = false;
+    }
     // переводим в JSON и отправляем ответ
-    echo json_encode($result); 
+    echo json_encode($answer, JSON_UNESCAPED_UNICODE); 
   }    
     
   // закрываем подключение

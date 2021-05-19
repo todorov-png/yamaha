@@ -1,15 +1,23 @@
 'use strict';
 
 //Плавное исчезновение уведомления
-function callPopUp(classBlock, textBlock, text) {
-  let popUp = document.querySelector(classBlock),
-      blockText = popUp.querySelector(textBlock);
+function callPopUp(text) {
+  const divPopUp = document.createElement( "div" ),
+      blockText = document.createElement( "p" ),
+      body = document.querySelector('body'),
+      oldDivPopUp = document.querySelector('.pop-up-notification');
 
-  popUp.style.display = 'block';
+  if (oldDivPopUp !== null) {
+    oldDivPopUp.remove();
+  }
+  
+  divPopUp.classList.add('pop-up-notification');
+  blockText.classList.add('pop-up-notification__text');
   blockText.textContent = text;
-  popUp.style.opacity = 1;
-
-  smoothTransparencyChange(popUp, 1500, 50);
+  blockText.zIndex = 100000;
+  divPopUp.append(blockText);
+  body.insertAdjacentElement('afterBegin', divPopUp);
+  smoothTransparencyChange(divPopUp, 1500, 50);
 }
 
 function smoothTransparencyChange(block, timeStart, timeInterval) {
@@ -17,7 +25,7 @@ function smoothTransparencyChange(block, timeStart, timeInterval) {
   setTimeout(()=>{
     setTimeout(function func() {
       if (op < 0) {
-        block.style.display = 'none';
+        block.remove();
         return;
       }
       block.style.opacity = op;

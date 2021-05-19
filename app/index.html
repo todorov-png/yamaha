@@ -9,9 +9,6 @@
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-    <div class="pop-up-notification">
-        <p class="pop-up-notification__text"></p>
-    </div>
     <div class="wrapper">
         <header class = "header">
             <div class="header__item">
@@ -20,8 +17,8 @@
                 </div>
                 <nav class="header__nav">
                     <ul class="header__menu">
-                        <li><a href="page/form_reg.html" class="menu__item">Зарегистрироваться</a></li>
-                        <li><a href="page/account_login.html" class="menu__item">Мой аккаунт</a></li>
+                        <li><a href="page/form_reg.html" class="menu__item registration">Зарегистрироваться</a></li>
+                        <li><a href="page/account_login.html" class="menu__item account-login">Войти</a></li>
                         <li><a href="page/page2.html" class="menu__item">Барабаны</a></li>
                         <li><a href="page/page2.html" class="menu__item">Гитары и бас гитары</a></li>
                         <li><a href="page/page2.html" class="menu__item">Фортепиано</a></li>
@@ -33,13 +30,13 @@
                 </nav>
             </div>
             <div class="header__item">
-                <p class="header__item-title">yamaha</p>
+                <a href="/" class="header__item-title">yamaha</a>
             </div>
             <div class="header__item">
-                <a href="page/form_reg.html" class="header__item-registration">Зарегистрироваться</a>
-                <a href="page/account_login.html" class="header__item-account">Мой аккаунт</a>
-                <a href="#" class="header__item-basket">
-                    <p>(<span>0</span>)</p> 
+                <a href="page/form_reg.html" class="header__item-registration registration">Зарегистрироваться</a>
+                <a href="page/account_login.html" class="header__item-account account-login">Войти</a>
+                <a href="page/basket.html" class="header__item-basket">
+                    <p>(<span class="counter-basket-text">0</span>)</p> 
                     <i class="fas fa-shopping-cart"></i>
                 </a>
             </div>
@@ -93,74 +90,74 @@
         </section>
         <section class="instruments">
             <span class="instruments__title">Популярные товары</span>
-            <div class="instruments-item">
+            <div class="instruments-item" data-id="0001">
                 <span class="instruments-item__hover-text">Купить</span>
                 <div class="instruments-item__text">
                     <h4>Саксафон Roy Benson RB700694</h4>
-                    <p>14 000 грн</p>
+                    <p>14000 грн</p>
                 </div>
             </div>
-            <div class="instruments-item">
+            <div class="instruments-item" data-id="0002">
                 <span class="instruments-item__hover-text">Купить</span>
                 <div class="instruments-item__text">
                     <h4>Бас-гитара Rockdale SPB-204M-SB</h4>
-                    <p>4 500 грн</p>
+                    <p>4500 грн</p>
                 </div>
             </div>
-            <div class="instruments-item">
+            <div class="instruments-item" data-id="0003">
                 <span class="instruments-item__hover-text">Купить</span>
                 <div class="instruments-item__text">
                     <h4>Рояль Kawai GM-10 ATX E/P</h4>
-                    <p>100 000 грн</p>
+                    <p>100000 грн</p>
                 </div>
             </div>
-            <div class="instruments-item">
+            <div class="instruments-item" data-id="0004">
                 <span class="instruments-item__hover-text">Купить</span>
                 <div class="instruments-item__text">
                     <h4>Барабанная установка Crash Force Five</h4>
-                    <p>5 000 грн</p>
+                    <p>5000 грн</p>
                 </div>
             </div>
-            <div class="instruments-item">
+            <div class="instruments-item" data-id="0005">
                 <span class="instruments-item__hover-text">Купить</span>
                 <div class="instruments-item__text">
                     <h4>Микшерный пульт для звукозаписи</h4>
-                    <p>4 500 грн</p>
+                    <p>4500 грн</p>
                 </div>
             </div>
-            <div class="instruments-item">
+            <div class="instruments-item" data-id="0006">
                 <span class="instruments-item__hover-text">Купить</span>
                 <div class="instruments-item__text">
                     <h4>Скрипка Stentor 1400/F</h4>
-                    <p>3 884 грн</p>
+                    <p>3884 грн</p>
                 </div>
             </div>
-            <div class="instruments-item">
+            <div class="instruments-item" data-id="0007">
                 <span class="instruments-item__hover-text">Купить</span>
                 <div class="instruments-item__text">
                     <h4>Барабанная установка Stage Custom Bop kit</h4>
-                    <p>7 500 грн</p>
+                    <p>7500 грн</p>
                 </div>
             </div>
-            <div class="instruments-item">
+            <div class="instruments-item" data-id="0008">
                 <span class="instruments-item__hover-text">Купить</span>
                 <div class="instruments-item__text">
                     <h4>Акустическая гитара Ibanez PF15</h4>
-                    <p>4 100 грн</p>
+                    <p>4100 грн</p>
                 </div>
             </div>
-            <div class="instruments-item">
+            <div class="instruments-item" data-id="0009">
                 <span class="instruments-item__hover-text">Купить</span>
                 <div class="instruments-item__text">
                     <h4>Микрофон Tannoy TSM85</h4>
-                    <p>1 240 грн</p>
+                    <p>1240 грн</p>
                 </div>
             </div>
-            <div class="instruments-item">
+            <div class="instruments-item" data-id="0010">
                 <span class="instruments-item__hover-text">Купить</span>
                 <div class="instruments-item__text">
                     <h4>Синтезатор Yamaha PSR-E453</h4>
-                    <p>10 000 грн</p>
+                    <p>10000 грн</p>
                 </div>
             </div>
         </section>

@@ -40,16 +40,17 @@ function images() {
 
 function scripts() {
     return src([ //Перечисляю файлы js, сначала плагины, а потом свои
-        'node_modules/jquery/dist/jquery.js',
+        //'node_modules/jquery/dist/jquery.js',
         'app/js/header.js',
         'app/js/pop_up.js',
         'app/js/form_records_tests.js',
         'app/js/form_registration.js',
         'app/js/form_account.js',
-        'app/js/instruments.js'
+        'app/js/instruments.js',
+        'app/js/local_storage.js'
     ])
         .pipe(concat('main.min.js')) // Обьединяю в 1 фаил
-        .pipe(uglify())              // Минифицирую
+        //.pipe(uglify())              // Минифицирую
         .pipe(dest('app/js'))        // Выкидываю в папку js
         .pipe(browserSync.stream()); // Обновляем сервер
 }

@@ -34,7 +34,6 @@ p, h3, h4, ul {
   text-align: center;
   width: 100%;
   z-index: 100;
-  display: none;
   &__text {
     display: inline-block;
     background-color: $footer-h4-color;
@@ -51,6 +50,9 @@ p, h3, h4, ul {
 .header {
   height: 7.4rem;
   box-sizing: border-box;
+  &__item-title, &__item-phone {
+    text-decoration: none;
+  }
 }
 
 @import 'form_reg.scss';

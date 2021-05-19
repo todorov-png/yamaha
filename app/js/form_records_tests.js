@@ -15,7 +15,7 @@ function showFormTests() {
 	}
 }
 
-if (hoverBtnTesting) {
+if (hoverBtnTesting !== null) {
 	hoverBtnTesting.addEventListener('mouseover', showFormTests);
 	hoverBtnTesting.addEventListener('touchstart', showFormTests);
 	window.addEventListener('resize', showFormTests);
@@ -23,20 +23,37 @@ if (hoverBtnTesting) {
 }
 
 
-//Получение данных с формы заявки без перезагрузки
-$(document).ready(function() {
-	//E-mail Ajax Send
-	$(".registration-for-testing__form").submit(function() {
-		var th = $(this);
-		$.ajax({
-			type: "POST",
-			url: "../php/mail.php",
-			data: th.serialize()
-		}).done(function() {
-			callPopUp('.pop-up-notification', '.pop-up-notification__text', 'Ваша заявка принята, ожидайте звонка');
-			smoothTransparencyChange(formTesting, 1000, 50);
-			th.trigger("reset");
+//Получение данных с формы регистрации без перезагрузки JS formData
+document.addEventListener('DOMContentLoaded', function(){
+  const form = document.querySelector(".registration-for-testing__form");
+	if (form !== null) {
+		form.addEventListener('submit', (e)=> {
+			const request = new XMLHttpRequest(),
+						formData = new FormData(form);
+			e.preventDefault();
+			callPopUp('Записываю вашу заявку, подождите!');
+			request.open('POST', '../php/mail.php');
+			request.send(formData);
+			request.addEventListener('load', () => {
+				if (request.status === 200) {
+					callPopUp('Ваша заявка принята, ожидайте звонка!');
+					form.reset();
+					let op = 1;
+					setTimeout(()=>{
+						setTimeout(function func() {
+							if (op < 0) {
+								formTesting.style.display = 'none';
+								return;
+							}
+							formTesting.style.opacity = op;
+							op -= 0.05;
+							setTimeout (func, 50);
+						}, 50); 
+					}, 1000);
+				} else {
+					callPopUp('Произошла ошибка, попробуйте еще!');
+				}
+			});
 		});
-		return false;
-	});
+	}
 });
