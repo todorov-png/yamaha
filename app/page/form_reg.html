@@ -35,35 +35,35 @@
             <div class="header__item">
                 <a href="tel:+380666700460" class="header__item-phone">66-670-04-60</a>
                 <a href="form_reg.html" class="header__item-registration registration">Зарегистрироваться</a>
-                <a href="basket.html" class="header__item-basket">
+                <a href="javascript:void(0);" onclick="goToBasket();" class="header__item-basket">
                     <p>(<span class="counter-basket-text">0</span>)</p> 
                     <i class="fas fa-shopping-cart"></i>
                 </a>
             </div>
         </header>
         <section class="wrapper-form-reg-speed">
-        <div class="form-reg-speed">
-            <a href="../index.html" class="home-link">
-            <i class="fas fa-home"></i>
-            </a>
-            <div class="form-reg-speed__heading">
-                <h4>Быстрая регистрация</h4>
-            </div>
-            <form class="form-reg-speed__form">
-                <div class="form-reg-speed__form-row">
-                    <label for="email">E-mail:</label>
-                    <input id="email" type="email" name="email" placeholder="E-mail" required>
+            <div class="form-reg-speed">
+                <a href="../index.html" class="home-link">
+                    <i class="fas fa-home"></i>
+                </a>
+                <div class="form-reg-speed__heading">
+                    <h4>Быстрая регистрация</h4>
                 </div>
-                <div class="form-reg-speed__form-row">
-                    <label for="password">Пароль:</label>
-                    <input id="password" type="password" name="password" placeholder="Пароль" required minlength="4" maxlength="25">
-                </div>
-            <div class="form-reg-speed__form-conteiner-btn">
-                <span>* Если вы зарегистрированы, перейдите на страницу <a href="account_login.html">входа&nbsp;в&nbsp;систему</a></span>
-                <button>Продолжить</button>
+                <form class="form-reg-speed__form">
+                    <div class="form-reg-speed__form-row">
+                        <label for="email">E-mail:</label>
+                        <input id="email" type="email" name="email" placeholder="E-mail" required>
+                    </div>
+                    <div class="form-reg-speed__form-row">
+                        <label for="password">Пароль:</label>
+                        <input id="password" type="password" name="password" placeholder="Пароль" required minlength="4" maxlength="25">
+                    </div>
+                    <div class="form-reg-speed__form-conteiner-btn">
+                    <span>* Если вы зарегистрированы, перейдите на страницу <a href="account_login.html">входа&nbsp;в&nbsp;систему</a></span>
+                    <button>Продолжить</button>
+                    </div>
+                </form>
             </div>
-        </form>
-        </div>
         </section>
     </div>
     <footer class="footer">

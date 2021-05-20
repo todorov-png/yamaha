@@ -20,9 +20,7 @@
       // Формируем массив для JSON ответа
       $answer = array(
         'password_status' => true,
-        'email' => $result['email'],
-        'phone' => $result['phone'],
-        'orders' => $result['orders']
+        'email' => $result['email']
       ); 
     } else {
       $answer = array(

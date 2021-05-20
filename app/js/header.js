@@ -36,6 +36,7 @@ if(userData !== null) {
 //При обновлении данных в localStorage обновляем шапки сайта
 window.addEventListener('storage', () => {
   updataUserData();
+  createTableBasket();
 });
 
 //Выравниваем эмблему по центру
@@ -72,13 +73,30 @@ function updataUserData() {
   //Проверяем есть ли что в корзине и обновляем счетчик
   const basketData = JSON.parse(localStorage.getItem('data_basket')),
         counterBasketText = document.querySelector(".counter-basket-text");
-  if(basketData !== null) {
+  if(basketData !== null && counterBasketText !== null) {
     //Считаем товары и изменяем счетчик корзины
     let i = 0;
-    basketData.tool.forEach(() => {
+    basketData.forEach(() => {
       i++;
     });
     counterBasketText.textContent = i;  
   }
 }
 
+
+function goToBasket() {
+  const basketData = JSON.parse(localStorage.getItem('data_basket')),
+        basketLink = document.querySelector(".header__item-basket");
+  if(basketData !== null) {
+    let i = 0;
+    basketData.forEach(() => {
+      i++;
+    });
+    if(i>0) {
+      document.location.href = "http://yamahashop.zzz.com.ua/page/basket.html";
+      basketLink.setAttribute("href", 'http://yamahashop.zzz.com.ua/page/basket.html');
+    }
+  } else {
+    callPopUp('Ваша корзина пуста!');
+  }
+}

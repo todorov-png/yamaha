@@ -24,33 +24,35 @@ if(instruments !== null) {
         let basket = JSON.parse(localStorage.getItem('data_basket')),
             attribute = elem.getAttribute("data-id");
 
+        const price = parseInt(elem.querySelector("p").textContent);
+
         if(basket === null) {
           //Если корзина пуста, то сохраняем данные
-          basket = {
-            tool : [{
+          basket = [{
               id: attribute,
               name: elem.querySelector("h4").textContent,
-              price: parseInt(elem.querySelector("p").textContent),
-              counter: 1
-            }]
-          };
+              price: price,
+              counter: 1,
+              sum: price
+          }];
           localStorage.setItem('data_basket', JSON.stringify(basket));
           counterBasketText.textContent = parseInt(counterBasketText.textContent) + 1;
           callPopUp('Товар добавлен в корзину!');
         } else {
           let i = 0;
-          basket.tool.forEach(obj => {
+          basket.forEach(obj => {
             if(obj.id === attribute) {
               i++;
             }
           });
-
+          
           if(i === 0) {
-            basket.tool.push({
+            basket.push({
               id: attribute,
               name: elem.querySelector("h4").textContent,
-              price: parseInt(elem.querySelector("p").textContent),
-              counter: 1
+              price: price,
+              counter: 1,
+              sum: price
             });
             localStorage.setItem('data_basket', JSON.stringify(basket));
             counterBasketText.textContent = parseInt(counterBasketText.textContent) + 1;

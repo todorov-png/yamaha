@@ -16,9 +16,7 @@
     if($result) {
       $answer = array(
         'password_status' => true,
-        'email' => $email,
-        'phone' => $password,
-        'orders' => 0
+        'email' => $email
       ); 
     } else {
       $answer = false;
