@@ -7,10 +7,11 @@
       or die("Ошибка " . mysqli_error($link));
   
   // выполняем операции с базой данных
-  if (isset($_POST['email']) && isset($_POST['password'])) {
+  if (isset($_POST['email']) && isset($_POST['password']) && isset($_POST['phone'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
-    $query = "INSERT INTO Users (email, password) VALUES ('$email', '$password')";
+    $phone = $_POST['phone'];
+    $query = "INSERT INTO Users (email, password, phone) VALUES ('$email', '$password', '$phone')";
     $result = mysqli_query($link, $query);
 
     if($result) {

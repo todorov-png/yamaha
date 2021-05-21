@@ -1,0 +1,133 @@
+.wrapper-account {
+  padding: 2.5rem 6rem;
+}
+
+.home-link {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 2rem;
+  &:hover {
+    color: green;
+  }
+}
+
+.account {
+  background-color: #bdb8b8;
+  border-radius: 1.2rem;
+  padding: 5rem 7rem 3rem;
+  position: relative;
+  min-height: 30rem;
+  &__heading {
+    border-bottom: 1px solid #7b7a7a;
+    margin-bottom: 1rem;
+    h4 {
+      font-weight: 300;
+      font-size: 2.6rem;
+      color: #7b7a7a;
+    }
+  }
+}
+
+.home-link {
+  color: black;
+}
+
+.table-history-orders {
+  border-spacing: 0 1.5rem;
+  border: 1px solid black;
+  border-radius: 1rem;
+  padding: 0 1rem 1rem;
+  margin-bottom: 1rem;
+  background-color:rgba(211, 134, 134, 0.342);
+  &__header {
+    font-size: 2rem;
+    color: black;
+  }
+  &__row {
+    width: 100%;
+    font-size: 1.6rem;
+    vertical-align: bottom;
+    &-name {
+      width: 35rem;
+    }
+    &-price {
+      width: 6rem;
+      text-align: center;
+    }
+    &-amount {
+      width: 9.5rem;
+      text-align: center;
+    }
+    &-name, &-price, &-amount {
+      border-bottom: 1px solid black;
+    }
+  }
+}
+
+
+@media (max-width: 960px) {
+  .header {
+    padding: 2rem 3rem;
+  }
+}
+
+@media (max-width: 864px) {
+  .wrapper-account {
+    padding: 2rem;
+  }
+  .account {
+    padding: 4rem 4rem 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .account {
+    padding: 2rem 2rem 1rem;
+    min-height: 25rem;
+    &__heading {
+      h4 {
+        font-size: 2rem;
+      margin-right: 3rem;
+      }
+    }
+  }
+  .table-history-orders {
+    border-spacing: 0 1rem;
+    &__header {
+      font-size: 1.8rem;
+    }
+    &__row {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .table-history-orders {
+    &__header {
+      font-size: 1.5rem;
+    }
+    &__row {
+      font-size: 1.2rem;
+      &-price {
+        width: 5rem;
+      }
+      &-amount {
+        width: 8rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .account {
+    min-height: 19.5rem;
+    padding: 1rem;
+  }
+  .home-link {
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.6rem;
+  }
+}

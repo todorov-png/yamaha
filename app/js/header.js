@@ -53,7 +53,9 @@ function headerRendering() {
 function updataUserData() {
   const accountLoginLink = header.querySelectorAll(".account-login"),
         registrationLink = header.querySelectorAll(".registration"),
-        basketLink = header.querySelector(".header__item-basket");
+        basketLink = header.querySelector(".header__item-basket"),
+        basketData = JSON.parse(localStorage.getItem('data_basket')),
+        counterBasketText = document.querySelector(".counter-basket-text");
 
   //Скрываем все кнопки входа
   if(accountLoginLink !== null) {
@@ -66,13 +68,12 @@ function updataUserData() {
   if(registrationLink !== null) {
     registrationLink.forEach((elem)=>{
       elem.textContent ="Мой аккаунт";
-      elem.setAttribute("href", 'http://yamahashop.zzz.com.ua/page/my_account.html');
+      elem.setAttribute("href", 'javascript:void(0);');
+      elem.setAttribute("onclick", 'goToMyAccount();');
     });
   }
 
   //Проверяем есть ли что в корзине и обновляем счетчик
-  const basketData = JSON.parse(localStorage.getItem('data_basket')),
-        counterBasketText = document.querySelector(".counter-basket-text");
   if(basketData !== null && counterBasketText !== null) {
     //Считаем товары и изменяем счетчик корзины
     let i = 0;

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мой аккаунт</title>
+  <link rel="icon" href="../images/favicon.ico"> 
+  <link rel="stylesheet" href="../css/form_account.min.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header class = "header">
+      <div class="header__item">
+        <div class="menu-burger__header">
+          <span></span>
+        </div>
+        <nav class="header__nav">
+          <ul class="header__menu">
+            <li><a href="javascript:void(0);" onclick="signOut();" class="menu__item">Выйти</a></li>
+            <li><a href="account_login.html" class="menu__item account-login"></a></li>
+            <li><a href="page2.html" class="menu__item">Барабаны</a></li>
+            <li><a href="page2.html" class="menu__item">Гитары и бас гитары</a></li>
+            <li><a href="page2.html" class="menu__item">Фортепиано</a></li>
+            <li><a href="page2.html" class="menu__item">Клавишные инструменты</a></li>
+            <li><a href="page2.html" class="menu__item">Струнные инструменты</a></li>
+            <li><a href="page2.html" class="menu__item">Студийное оборудование</a></li>
+            <li><a href="page2.html" class="menu__item">Домашний кинотеатр</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header__item">
+        <a href="/" class="header__item-title">yamaha</a>
+      </div>
+      <div class="header__item">
+        <a href="tel:+380666700460" class="header__item-phone">66-670-04-60</a>
+        <a href="javascript:void(0);" onclick="signOut();" class="header__item-registration">Выйти</a>
+        <a href="javascript:void(0);" onclick="goToBasket();" class="header__item-basket">
+          <p>(<span class="counter-basket-text">0</span>)</p> 
+          <i class="fas fa-shopping-cart"></i>
+        </a>
+      </div>
+    </header>
+      <section class="wrapper-account">
+        <div class="account">
+          <a href="../index.html" class="home-link">
+            <i class="fas fa-home"></i>
+          </a>
+          <div class="account__heading">
+            <h4 class="account__heading-text">История заказов</h4>
+          </div>
+        </div>
+      </section>
+  </div>
+  <footer class="footer">
+    <nav class="footer-nav">
+      <div class="footer-nav-column">
+        <ul class="footer-list">
+          <li class="footer-list__item"><a class="footer-list__link" href="#"><h4>Барабаны</h4></a></li>
+          <li class="footer-list__item"><a class="footer-list__link" href="#">Акустические барабаны</a></li>
+          <li class="footer-list__item"><a class="footer-list__link" href="#">Электронные барабаны</a></li>
+          <li class="footer-list__item"><a class="footer-list__link" href="#">Барабанные установки</a></li>
+        </ul>
+        <ul class="footer-list">
+          <li class="footer-list__item"><a class="footer-list__link" href="#"><h4>Студийное  оборудование</h4></a></li>
+          <li class="footer-list__item"><a class="footer-list__link" href="#">Микшеры</a></li>
+          <li class="footer-list__item"><a class="footer-list__link" href="#">Интерфейсы и конвертеры</a></li>
+          <li class="footer-list__item"><a class="footer-list__link" href="#">Студийные микрофоны</a></li>
+          <li class="footer-list__item"><a class="footer-list__link" href="#">Контроллеры</a></li>
+          <li class="footer-list__item"><a class="footer-list__link" href="#">Студийные мониторы</a></li>
+          <li class="footer-list__item"><a class="footer-list__link" href="#">Микрофонные предусилители</a></li>
+        </ul>
+      </div>
+      <div class="footer-nav-column">
+        <ul class="footer-list">
+          <li class="footer-list__item"><a class="footer-list__link" href="#"><h4>Гитары и бас-гитары</h4></a></li>
+          <li class="footer-list__item"><a class="footer-list__link" href="#">Акустические гитары</a></li>
+          <li class="footer-list__item"><a class="footer-list__link" href="#">Электрогитары</a></li>
+          <li class="footer-list__item"><a class="footer-list__link" href="#">Классические гитары с нейлоновыми струнами</a></li>
+          <li class="footer-list__item"><a class="footer-list__link" href="#">Усилители и аксессуары</a></li>
+        </ul>
+        <ul class="footer-list">
+          <li class="footer-list__item"><a class="footer-list__link" href="#"><h4>Струнные инструменты</h4></a></li>
+          <li class="footer-list__item"><a class="footer-list__link" href="#">Акустические скрипки</a></li>
+          <li class="footer-list__item"><a class="footer-list__link" href="#">Электроскрипки</a></li>
+          <li class="footer-list__item"><a class="footer-list__link" href="#">Смычки</a></li>
+        </ul>
+      </div>
+      <div class="footer-nav-column">
+        <ul class="footer-list">
+          <li class="footer-list__item"><a class="footer-list__link" href="#"><h4>Клавишные инструменты</h4></a></li>
+          <li class="footer-list__item"><a class="footer-list__link" href="#">Портативные клавишные инструменты</a></li>
+          <li class="footer-list__item"><a class="footer-list__link" href="#">Синтезаторы и сценические цифровые фортепиано</a></li>
+          <li class="footer-list__item"><a class="footer-list__link" href="#">Аранжировочные станции</a></li>
+        </ul>
+        <ul class="footer-list">
+          <li class="footer-list__item"><a class="footer-list__link" href="#"><h4>Рояль</h4></a></li>
+          <li class="footer-list__item"><a class="footer-list__link" href="#">Концертные рояли</a></li>
+          <li class="footer-list__item"><a class="footer-list__link" href="#">Фортепиано</a></li>
+          <li class="footer-list__item"><a class="footer-list__link" href="#">Синтезаторы и сценические цифровые фортепиано</a></li>
+        </ul>
+      </div>
+      <div class="footer-nav-column">
+        <ul class="footer-list">
+          <li class="footer-list__item"><a class="footer-list__link" href="#"><h4>Домашний кинотеатр</h4></a></li>
+          <li class="footer-list__item"><a class="footer-list__link" href="#">Микрокомпонентные системы</a></li>
+          <li class="footer-list__item"><a class="footer-list__link" href="#">Сетевые компоненты</a></li>
+          <li class="footer-list__item"><a class="footer-list__link" href="#">Системы домашнего кинотеатра</a></li>
+          <li class="footer-list__item"><a class="footer-list__link" href="#">AV-Ресиверы</a></li>
+          <li class="footer-list__item"><a class="footer-list__link" href="#">Настольные аудиосистемы</a></li>
+          <li class="footer-list__item"><a class="footer-list__link" href="#">Проигрыватели Blu-ray</a></li>
+        </ul>
+      </div>
+    </nav> 
+    <div class="footer-contacts">
+      <div class="footer-contacts__wrapper">
+        <div class="footer-contacts__item">
+          <ul class="social-network">
+            <li class="social-network__vk"><a href="#"><i class="fab fa-vk"></i></a></li>
+            <li class="social-network__facebook"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li class="social-network__twitter"><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li class="social-network__pinterest"><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+          </ul>
+        </div>
+        <div class="footer-contacts__item">
+          <address>ООО "Ямаха Мюзик" 121059, Украина, Днепр, ул.Киевская д.7</address>
+        </div>
+        <div class="footer-contacts__item">
+          <a href="tel:+380666700460">+380 (66) 670-04-60</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://kit.fontawesome.com/5ee99253b8.js" crossorigin="anonymous"></script>
+  <script src="../js/main.min.js"></script>
+</body>
+</html>
